@@ -91,3 +91,24 @@ gift.addEventListener("click", () => {
 
   title.textContent = "Here are some special gifts for you!";
 });
+
+const loveLetter = document.getElementById("letter");
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close");
+
+// When love letter is clicked
+loveLetter.addEventListener("click", () => {
+  modal.style.display = "flex";
+  modalImg.src = "assets/letter_content.JPG";
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
